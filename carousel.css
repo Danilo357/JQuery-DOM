@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+}
+
+#carousel button {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  height: 140px;
+  text-align: center;
+  font-size: 35px;
+  position: absolute;
+  top: 50%;
+  margin-top: -70px;
+  border: 1px solid white;
+  outline: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#carousel #left {
+  border-left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  left: 0;
+}
+#carousel #right {
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  right: 0;
+}
+
+#image img {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+  height: 100%;
+}
+
+#image img.active {
+  opacity: 1;
+}

@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+#accordian {
+  width: 500px;
+  margin: auto;
+}
+
+a {
+  display: block;
+  background: rgb(33, 216, 232);
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid rgb(29, 192, 207);
+  border-top: 0;
+}
+li:first-child a {
+  border-top: 1px solid rgb(29, 192, 207);
+}
+li:last-child a {
+  border-bottom: 0;
+}
+.content {
+  height: 0;
+  transition: height 0.4s;
+  overflow: hidden;
+  border: 0;
+}
+
+.content.active {
+  height: 150px;
+  border: 1px solid rgb(29, 192, 207);
+  border-top: 0;
+}
+
+.content p {
+  padding: 10px;
+}
+
+a:hover {
+  background: rgb(29, 192, 207);
+}
